@@ -76,7 +76,7 @@ public class SimpleSocket extends Activity {
                             //String output = callSocket(serverAddr, port.getText().toString(), socketInput.getText().toString());
                             String output = callSocket(serverAddr, port.getText().toString(), socketInput.getText().toString());
                             //socketOutput.setText(output);
-                            new updateUIThread(output).run();
+                            SimpleSocket.this.h.post(new updateUIThread(output));
                         }
 
                     };
